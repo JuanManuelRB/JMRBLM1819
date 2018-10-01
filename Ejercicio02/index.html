@@ -12,7 +12,13 @@
 </head>
 
 
-<body style="background-image: url('Imagenes/Pipo.jpg'); background-repeat:repeat;">
+<!--<body style="background-image: url('Imagenes/Pipo.jpg'); 
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;">-->
+<!--<body style="background: url('Imagenes/Pipo.jpg') no-repeat center center fixed; background-size: cover;">-->
+<body>
     <!--Enlaces-->
         <a href="http://www.google.es" target="_blank" hreflang="es" rel="next" type="">Google</a>
         <a href="nuevo.html">Ir a nuevo</a>
@@ -21,7 +27,11 @@
 
     <!--Imágenes-->
 
-        <img src="Imagenes/clorox.png" alt="Clorox" style="width: 100px; height: 200px;">
+        <img src="Imagenes/clorox.png" alt="Clorox" usemap="#formas" ismap="ismap"/>
+        <map name="formas" id="formas">
+            <area shape="poly" coords="47,303,47,280,124,244,201,280,201,303,124,339" href="https://youtu.be/aJ7Tv6ukASw" target="_blank"/>
+            <area shape="rect" coords=""/>
+        </map>
 
 </body>
 
