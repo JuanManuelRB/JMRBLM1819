@@ -13,7 +13,7 @@
                 <legend>Datos de usuario</legend>
                 <label for="Nombre">Nombre</label> <input type="text" value=""
                     name="Nombre" placeholder="Nombre" size="20" maxlength="50"
-                    id="Nombre" />
+                    id="Nombre" pattern="[A-Z]{5}[0-9]{3}" />
                 <br/>
                     <label>Contraseña<input type="password" name="Contraseña"
                             value="" size="40" maxlength="50" /></label>
@@ -57,6 +57,17 @@
                                         <br/>
                                         <input type="number" min="-10" max="10" maxlength="10">
                                         <input type="email">
+                                        <input type="url">
+                                        <br/>
+                                        <input type="date">
+                                        <input type="time">
+                                        <input type="datetime-local">
+                                        <input type="month">
+                                        <input type="search">
+                                        <input type="tel" required="required">
+                                        <input type="range" min="0" max="10" step="2">
+                                        <input type="color">
+                                        <br/>
                                     </form>
 
                                 </body>
