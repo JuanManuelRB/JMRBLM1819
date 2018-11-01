@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <form action="gestiondatos.jsp" method="GET">
+            <fieldset>
+                <legend>Datos de usuario</legend>
+                <label for="Nombre">Nombre</label> <input type="text" value=""
+                    name="Nombre" placeholder="Nombre" size="20" maxlength="50"
+                    id="Nombre" pattern="[A-Z]{5}[0-9]{3}" />
+                <br/>
+                    <label>Contraseña<input type="password" name="Contraseña"
+                            value="" size="40" maxlength="50" /></label>
+                    <input type="button" name="boton" value="Pulsar" />
+                    <input type="reset" name="Borrar" />
+                    <br/>
+                        <label for="pregunta">¿Pipo?</label>
+                        <input type="radio" name="Pregunta" value="S"
+                            id="pregunta" checked="checked" />Sí
+                        <input type="radio" name="Pregunta" value="N"
+                            id="pregunta" />No
+                        <br/>
+                            <label for="aficion">Aficiones</label>
+                            <input type="checkbox" name="clorox" value="Cl"
+                                id="aficion" />Clorox
+                            <input type="checkbox" name="clorox" value="Ci"
+                                id="aficion" />Cine
+                            <br/>
+                                <label for="provincias">Provincias</label>
+                                <select name="provincias" id="provincias">
+                                    <optgroup label="Uno">
+                                        <option value="SE">Sevilla</option>
+                                    </optgroup>
+                                    <optgroup label="Dos">
+                                        <option value="CA">Cádiz</option>
+                                        <option value="HU">Huelva</option>
+                                    </optgroup>
+
+                                </select>
+                                <br/>
+                                    <input type="file" name="archivo" />
+                                    <br/>
+
+                                        <textarea name="area" id="area"
+                                            cols="30" rows="10" maxlength="50"></textarea>
+                                        <br/>
+                                            <input type="submit" value="Enviar"
+                                                />
+                                        </fieldset>
+                                        
+                                        <br/>
+                                        <input type="number" min="-10" max="10" maxlength="10">
+                                        <input type="email">
+                                        <input type="url">
+                                        <br/>
+                                        <input type="date">
+                                        <input type="time">
+                                        <input type="datetime-local">
+                                        <input type="month">
+                                        <input type="search">
+                                        <input type="tel" required="required">
+                                        <input type="range" min="0" max="10" step="2">
+                                        <input type="color">
+                                        <br/>
+                                    </form>
+
+                                </body>
+                            </html>
