@@ -5,51 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        td.f {border-radius: 0px 0px 10px 10px; border-style: solid; border-color: #c94c4c; border-width: 2px; padding: 10px; background-color: #eea29a; margin: 5px}
+        input.i {background-color: #eea29a; border-style: none; box-shadow: 0 1px 1px #f7786b inset, 0 0 8px #f7cac9; outline: 0 none}
+        td.l {border-radius: 10px 10px 0px 0px; border-style: solid; border-color: #c94c4c; border-width: 2px; padding: 10px; background-color: #eea29a;}
+    </style>
+    
 </head>
 <body>
     <div>
         <table>
-            <tr><td>
-                <label for="btn_enviar">Escriba su email</label>
-            </td><td>
-                <label for="btn_enviar">Escriba su direccion web</label>
-            </td><td>
-                <label for="btn_enviar">Escriba su numero de telefono</label>
+            <tr><td class="l">
+                <label for="emai">Escriba su email</label>
+            </td><td class="l">
+                <label for="dirweb">Escriba su direccion web</label>
+            </td><td class="l">
+                <label for="telef">Escriba su numero de telefono</label>
             </td></tr>
                 
-            <tr><td>
-                <div style="border-radius: 0px 0px 10px 10px; border-style: solid; border-color: red; padding: 10px; background-color: lime;"><input id="" type="email" style="background-color: limegreen; border-style: none; box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px darkgreen; outline: 0 none"></div><!--el color es to feo, cambialo-->
-            </td><td>
-                <div style="border-radius: 0px 0px 10px 10px; border-style: solid; border-color: red; padding: 10px; background-color: lime;"><input id="" type="email" style="background-color: limegreen; border-style: none; box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px darkgreen; outline: 0 none"></div><!--el color es to feo, cambialo-->
-            </td><td>
-                <div style="border-radius: 0px 0px 10px 10px; border-style: solid; border-color: red; padding: 10px; background-color: lime;"><input id="" type="email" style="background-color: limegreen; border-style: none; box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px darkgreen; outline: 0 none"></div><!--el color es to feo, cambialo-->
+            <tr><td class="f">
+                <input class="i" id="emai" type="email">
+            </td><td class="f">
+                <input class="i" id="dirweb" type="url">
+            </td><td class="f">
+                <input class="i" id="telef" type="tel">
             </td></tr>
 
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                <label for=""></label>
-            </td><td>
-                <label for=""></label>
-            </td></tr>
+            <tr><td class="l">
+                    <label for=""></label>
+                </td><td class="l">
+                    <label for=""></label>
+                </td><td class="l">
+                    <label for=""></label>
+                </td></tr>
+                    
+                <tr><td class="f">
+                    <input class="i" id="" type="">
+                </td><td class="f">
+                    <input class="i" id="" type="">
+                </td><td class="f">
+                    <input class="i" id="" type="">
+                </td></tr>
 
-            <tr><td>
-                <input id="" type="">
-            </td><td>
-                <input id="" type="">
-            </td><td>
-                <input id="" type="">
-            </td></tr>
+            
             
             
             <!--
             <td>
-                <input id="btn_enviar" type="submit" value="Enviar"/>
+                                <input id="btn_enviar" type="submit" value="Enviar"/>
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="number" min="-10" max="10" maxlength="10">
+                                <input id="" type="number" min="-10" max="10" maxlength="10">
             </td></tr>
             <tr><td>
                 <label for=""></label>
@@ -59,47 +68,47 @@
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="url">
+                                <input id="" type="url">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="date">
+                                <input id="" type="date">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="time">
+                                <input id="" type="time">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="datetime-local">
+                                <input id="" type="datetime-local">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="month">
+                                <input id="" type="month">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="search">
+                                <input id="" type="search">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="tel" required="required">
+                                <input id="" type="tel" required="required">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="range" min="0" max="10" step="2">
+                                <input id="" type="range" min="0" max="10" step="2">
             </td></tr>
             <tr><td>
                 <label for=""></label>
             </td><td>
-                <input id="" type="color">
+                                <input id="" type="color">
             </td></tr>
             -->
 
