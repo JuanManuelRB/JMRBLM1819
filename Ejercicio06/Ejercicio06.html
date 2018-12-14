@@ -16,102 +16,50 @@
 <body>
     <div>
         <table>
-            <tr><td class="l">
-                <label for="emai">Escriba su email</label>
-            </td><td class="l">
-                <label for="dirweb">Escriba su direccion web</label>
-            </td><td class="l">
-                <label for="telef">Escriba su numero de telefono</label>
-            </td></tr>
-                
-            <tr><td class="f">
-                <input class="i" id="emai" type="email">
-            </td><td class="f">
-                <input class="i" id="dirweb" type="url">
-            </td><td class="f">
-                <input class="i" id="telef" type="tel">
-            </td></tr>
-
-            <tr><td class="l">
-                    <label for=""></label>
-                </td><td class="l">
-                    <label for=""></label>
-                </td><td class="l">
-                    <label for=""></label>
-                </td></tr>
-                    
-                <tr><td class="f">
-                    <input class="i" id="" type="">
-                </td><td class="f">
-                    <input class="i" id="" type="">
-                </td><td class="f">
-                    <input class="i" id="" type="">
-                </td></tr>
-
-            
-            
-            
-            <!--
-            <td>
-                                <input id="btn_enviar" type="submit" value="Enviar"/>
-            </td></tr>
             <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="number" min="-10" max="10" maxlength="10">
-            </td></tr>
+            <input type="file" name="archivo"/>
+            </td></tr>       
+            <tr><td><label for="area">Escriba en este area</label></td><td>
+            <textarea name="area" id="area" cols="30" rows="10" maxlength="50"></textarea>
+            </td></tr>            
+            <tr><td><label for="num">Escriba un numero en un rango</label></td> <td>
+            <input type="number" min="-10" max="10" maxlength="10">
+            </td></tr>  
+            <tr><td><label for="emai">Escribe un email</label></td> <td>
+            <input type="email"/>
+            </td></tr>  
+            <tr><td><label for="url">Escribe una url</label></td> <td>
+            <input type="url"/>
+            </td></tr>  
+            <tr><td><label for="dat">Selecciona una fecha</label></td> <td>
+            <input type="date"/>
+            </td></tr>    
+            <tr><td><label for="tim">Selecciona una hora</label></td> <td>
+            <input type="time"/>
+            </td></tr>          
+            <tr><td><label for="dattim">Selecciona hora y fecha</label></td> <td>
+            <input type="datetime-local"/>
+            </td></tr>         
+            <tr><td><label for="mon">Selecciona un mes</label></td> <td>
+            <input type="month"/>
+            </td></tr>       
+            <tr><td></td> <td>
+            <input type="search"/>
+            </td></tr>    
+            <tr><td><label for="tel">Escriba un numero de teléfono</label></td> <td>
+            <input type="tel" required="required"/>
+            </td></tr>        
             <tr><td>
-                <label for=""></label>
-            </td><td>
-                
+            <input type="range" min="0" max="10" step="1"/>
+            </td></tr>           
+            <tr><td><label for="col">Selecciona un color</label></td> <td>
+            <input type="color"/>
             </td></tr>
+            <tr><td><label for="pass">Escriba una contraseña</label></td>
+            <td><input type="password" min="8" pattern="[0-9].*.[A-Z]"></td></tr>
             <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="url">
+            <input type="submit" value="Enviar"/>
             </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="date">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="time">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="datetime-local">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="month">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="search">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="tel" required="required">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="range" min="0" max="10" step="2">
-            </td></tr>
-            <tr><td>
-                <label for=""></label>
-            </td><td>
-                                <input id="" type="color">
-            </td></tr>
-            -->
-
         
         </table>    
     </div>

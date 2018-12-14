@@ -3,8 +3,10 @@
 #imgcontainer{display: inline-block; height: 20%; padding: 20px; width: 100%}
 #img{display: inline-block; margin-right: 5%}
 #texthead{display: inline-block;}
-#hnav{display: inline-block; height: 5%;}
+#hnav{display: inline-block; height: 10%; background-color: darkcyan; width: 100%}
+.acl{background-color: darkcyan; border-style: solid; border-width: 1px; border-color: cornflowerblue; height: 10%; color: white}
 
+#body{background-color: wheat }
 
 #sec{display: inline-block; width: 70%; background-color: coral; margin: 1%; height: 500px;}
 
@@ -19,4 +21,5 @@
 
 #side{float: right; width: 23%; height: 500px; margin: 1%; background-color: gray}
 .sidetitle{background-color: darkgrey; border-style: solid; border-width: 1px; border-color: lightslategray}
-.sidecont{margin-bottom: 5%; border-style: solid; border-top-style: none; border-width: 1px; border-color: lightslategray}
+.sidecont{margin-bottom: 5%; border-style: solid; border-top-style: none; border-width: 1px; border-color: lightslategray; padding: 1px;}
+#img{background-color: crimson}
