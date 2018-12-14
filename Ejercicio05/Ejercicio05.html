@@ -1,33 +1,3 @@
-<!--
-    Crea una página web que contenga un formulario con los siguientes campos de información:
-
-Nombre, con un control de tipo texto obligatorio y con autofoco.
-Correo electrónico, con un control de tipo email obligatorio.
-URL, con un control de tipo url que muestre la ayuda "Escribe la URL de tu página web personal".
-Fecha, con un control de tipo date.
-Tiempo, con un control de tipo time.
-Fecha y hora, con un control de tipo datetime.
-Mes, con un control de tipo month.
-Semana, con un control de tipo week.
-Número, con un control de tipo number que limite la entrada a un valor entre -10 y 10.
-Teléfono, con un control de tipo tel.
-Término de búsqueda, con un control de tipo search.
-Color favorito, con un control de tipo color.
-Un botón de envío.
-
-Además, tienes que tener en cuenta los siguientes requisitos:
-
-El título de la página debe ser Formulario de prueba de HTML5.
-El método de envío del formulario debe ser GET.
-El destino del envío del formulario debe ser "".
-
-Nota: si al validar el código HTML de tu página web con el validador del W3C se muestran mensajes de advertencia como The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill. no te preocupes, el validador te está avisando de que lleves cuidado al usar una característica de HTML5 que no está admitida por todos los navegadores actuales.
-
-Nota: por lo anterior, cuando realices esta actividad y compruebes cómo se visualiza tu página web en distintos navegadores es muy probable que obtengas diferentes resultados.
-
-Debes crear una página web que tenga el mismo aspecto que la siguiente imagen:
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,81 +10,34 @@ Debes crear una página web que tenga el mismo aspecto que la siguiente imagen:
     <div>
         <form action="" method="GET">
 
-            <table>
-                <tr><td><label for="nombre">Nombre</label></td><td><input type="text" value="" id="nombre"/></td></tr>
+            <table style="width: 40%;">
+                <tr><td><label for="nombre">Nombre</label></td><td><input type="text" value="" id="nombre" autofocus required/></td></tr>
 
-                <tr><td><label for="email">Correo Electrónico</label></td><td><input type="email" id="email"/></td></tr>
-                
+                <tr><td><label for="email">Correo Electrónico</label></td><td><input type="email" id="email" required/></td></tr>
 
-                <tr><td><label for="url">Introduce una Url</label></td></tr>
+                <tr><td><label for="url">Introduce una Url</label></td><td><input type="url" id="url" placeholder="Escribe la URL de tu página web personal"/></td></tr>
 
-                <tr><td><input type="url" id="url" placeholder="Escribe la URL de tu página web personal"/><br/><br/></td></tr>
+                <tr><td><label for="date">Selecciona una fecha</label></td><td><input type="date" id="date"/><br/></td></tr>
 
+                <tr><td><label for="time">Selecciona una hora</label></td><td><input type="time" id="time"/><br/></td></tr>
 
-                <tr><td><label for="date">Selecciona una fecha</label></td></tr>
-
-                <tr><td><input type="date" id="date"/><br/></td></tr>
-
-
-                <tr><td><label for="time">Selecciona una hora</label></td></tr>
-
-                <tr><td><input type="time" id="time"/><br/></td></tr>
-
-
-                <tr><td><label for="datetime">Selecciona fecha y hora</label></td></tr>
-                
-                <tr><td><input type="datetime" id="datetime"/><br/></td></tr>
-
+                <tr><td><label for="datetime">Selecciona fecha y hora</label></td><td><input type="datetime" id="datetime"/><br/></td></tr>
 
                 <tr><td><label for="month">Introduce un mes</label></td><td><input type="month" id="month"/></td></tr>
 
-                <tr></tr>
-
-
                 <tr><td><label for="week">Introduce una semana</label></td><td><input type="week" id="week"/><br/></td></tr>
 
-                <tr></tr>
+                <tr><td><label for="numero">Introduce un numero del -10 al 10</label></td><td><input type="number" id="numero" min="-10" max="10"/></td></tr>
+
+                <tr><td><label for="telefono">Introduce un numero de telefono</label></td><td><input type="tel" id="telefono"/></td></tr>
+
+                <tr><td><label for="busqueda">Realiza una busqueda</label></td><td><input type="search" id="busqueda"/></td></tr>
+
+                <tr><td><label for="color">Selecciona un color</label></td><td><input type="color" id="color"/><br/></td></tr>
 
                 
 
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
-                <tr><td></td></tr>
-
             </table>
-
-            <tr><td></td></tr>
-
-            
-            
-
-          
-        </fieldset><br/>
-        <fieldset>
-            <label for="numero"></label>
-            <input type="number" id="numero"/><br/>
-
-            <label for="telefono"></label>
-            <input type="tel" id="telefono"/><br/>
-
-            <label for="busqueda"></label>
-            <input type="search" id="busqueda"/><br/>
-
-            <label for="color"></label>
-            <input type="color" id="color"/><br/>
-        </fieldset>
         
             <input type="submit" value="Enviar" id="boton"/>
 
