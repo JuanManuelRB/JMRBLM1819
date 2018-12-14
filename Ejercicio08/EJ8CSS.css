@@ -1,5 +1,22 @@
-.head{background-color: aquamarine}
+.head{background-color: aquamarine; height: 25%;}
 
-div.imgcontainer{margin-top: 2%; margin-bottom: 2%; display: inline-block;}
-div.img{margin: 2%; display: inline;}
-div.texthead{display: inline;}
+#imgcontainer{display: inline-block; height: 20%; padding: 20px; width: 100%}
+#img{display: inline-block; margin-right: 5%}
+#texthead{display: inline-block;}
+#hnav{display: inline-block; height: 5%;}
+
+
+#sec{display: inline-block; width: 70%; background-color: coral; margin: 1%; height: 500px;}
+
+#link{display: inline-block; background-color: brown; width: 100%;}
+.linka{color: darkslategrey;}
+#heartbleed{color: darkslategray}
+#middle{background-color: chocolate; height: 200px; border-radius: 10px; margin-bottom: 20px;}
+#down{color: chocolate; margin-bottom: 20px;}
+#foot{color: chocolate}
+.a{color: chocolate}
+
+
+#side{float: right; width: 23%; height: 500px; margin: 1%; background-color: gray}
+.sidetitle{background-color: darkgrey; border-style: solid; border-width: 1px; border-color: lightslategray}
+.sidecont{margin-bottom: 5%; border-style: solid; border-top-style: none; border-width: 1px; border-color: lightslategray}
