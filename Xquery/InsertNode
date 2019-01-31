@@ -1,0 +1,12 @@
+insert node
+<baile id="7">
+<precio cuota="mensual" moneda="dolares">22</precio>
+<plazas>12</plazas>
+<comienzo>01/01/2020</comienzo>
+<fin>03/03/2020</fin>
+<profesor>Freddy</profesor>
+<sala>3</sala>
+</baile>
+before //Bailes/baile[1]
+<!--as first into //Bailes-->
+

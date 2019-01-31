@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1>Baliles ofertados</h1>
+<table style="border: 1px solid black">
+<tr>
+	<th>Nombre</th>
+	<th>Profesor</th>
+	<th>Plazas</th>
+</tr>
+{
+for $baile in //Bailes/baile
+
+let $nombre:=$baile/nombre
+let $profesor:=$baile/profesor
+let $plazas:=$baile/plazas
+
+where $baile/precio[@cuota="trimestral"]
+order by $baile/plazas
+
+return
+	<tr>
+		<td>{data($nombre)}</td>
+		<td>{data($profesor)}</td>
+		<td>{data($plazas)}</td>
+	</tr>
+}
+</table>
+</body>
+</html>
+
+

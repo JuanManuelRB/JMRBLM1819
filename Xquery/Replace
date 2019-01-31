@@ -1,0 +1,5 @@
+replace value of node //Bailes/baile[1]/profesor
+with "Profe"
+,
+replace value of node //Bailes/baile[1]/plazas
+with 200
