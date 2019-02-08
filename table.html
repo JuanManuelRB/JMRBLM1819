@@ -8,17 +8,16 @@
 </head>
 <body>
 
-    <table style="border-bottom-color: black;border-style: solid;">
-        <tr><td colspan="2">Sistemas</td><td>Tamaño max. Volumen</td><td>Tamaño max. nombre archivo</td><td>Max. archivos</td><td>Max. dimension archivo</td><td>Estructura</td><td>Desventajas</td></tr>
-        <tr><td colspan="2">NTFS</td></tr>
-        <tr><td rowspan="4">ext</td><td>ext</td></tr>
-        <tr><td>ext2</td></tr>
-        <tr><td>ext3</td></tr>
-        <tr><td>ext4</td></tr>
-        <tr><td rowspan="3">FAT</td><td>FAT12</td></tr>
-        <tr><td>FAT16</td></tr>
-        <tr><td>FAT32</td></tr>
-
+    <table style="border-collapse: collapse; width: 100%">
+        <tr><td colspan="2" style="border-color: black; border-style: solid; border-width: 1px">Sistemas de archivos</td><td style="border-color: black; border-style: solid; border-width: 1px">Tamaño max. Volumen</td><td style="border-color: black; border-style: solid; border-width: 1px">Tamaño max. nombre archivo</td><td style="border-color: black; border-style: solid; border-width: 1px">Max. archivos</td><td style="border-color: black; border-style: solid; border-width: 1px">Max. dimension archivo</td><td style="border-color: black; border-style: solid; border-width: 1px">Soporte</td></tr>
+        <tr><td colspan="2" style="border-color: black; border-style: solid; border-width: 1px">NTFS</td><td>256 TiB con la actual implementación (16 EiB según su arquitectura)</td><td>255 caracteres</td><td>4.294.967.295 (2<sup>32</sup>–1)</td><td>16 TiB con la actual implementación (16 EiB según su arquitectura)</td><td>Familia Windows NT (Windows NT 3.1 a Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 R2, Windows 10), Mac OS X, Linux</td></tr>
+        <tr><td rowspan="4" style="border-color: black; border-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid">ext</td><td style="border-color: black; border-width: 1px; border-top-style: solid; border-right-style: solid">ext</td><td></td></tr>
+        <tr><td style="border-color: black; border-width: 1px; border-right-style: solid">ext2</td><td>16 TiB</td><td>255 caracteres</td><td>10<sup>18</sup></td><td>2 TiB</td><td>Linux, BSD, Windows (mediante IFS), Mac OS X, AmayaOS</td></tr>
+        <tr><td style="border-color: black; border-width: 1px; border-right-style: solid">ext3</td><td></td><td>255 bytes</td><td></td><td></td><td>Linux, BSD, Windows (a través de IFS)</td><td></td></tr>
+        <tr><td style="border-color: black; border-width: 1px; border-right-style: solid; border-bottom-style: solid">ext4</td><td>1024 PiB</td><td>256 bytes</td><td>4x10<sup>9</sup></td><td></td><td>Linux</td><td></td></tr>
+        <tr><td rowspan="3" style="border-color: black; border-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid">FAT</td><td style="border-color: black; border-width: 1px; border-right-style: solid">FAT12</td><td>32 MiB</td><td rowspan="3">8.3 (11) o 255 caracteres cuando se usan LFNs (Long File Names)</td><td>4.068 para clústers de 8 KiB</td><td>32 MiB</td><td>MS-DOS, MS-DOS 2.0, MS-DOS 3.0</td></tr>
+        <tr><td style="border-color: black; border-width: 1px; border-right-style: solid">FAT16</td><td>2 GiB (4 GiB en Windows NT)</td><td>65.460 para clústers de 32 KiB</td><td>2 GiB</td><td>MS-DOS 4.0, Windows NT, Windows 98 (solo lectura y escritura en disco)</td></tr>
+        <tr><td style="border-color: black; border-width: 1px; border-bottom-style: solid; border-right-style: solid">FAT32</td><td>10 TiB</td><td>268.173.300 para clústers de 32 KiB</td><td>4 GiB - 1</td><td>Windows 95 OSR2, Windows 98, Windows 2000</td></tr>
     </table>
     
 </body>
