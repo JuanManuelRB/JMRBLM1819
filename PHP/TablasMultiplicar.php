@@ -11,8 +11,7 @@
     <?php
     
     $i=1;
-    
-    
+    $linea=""
     while ($i <= 10){
         $j=1;
         while ($j <= 10) {
@@ -20,10 +19,10 @@
             $res=($i * $j);
             $j++;
 
-            
+            $linea=($j . " x " . $i . " = " . $res);
         }
         $i++;
-    echo "<table><tr><td>" . $i . "</td><td></td></tr></table>"    
+    echo $linea  
     }
 
     
