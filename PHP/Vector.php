@@ -16,7 +16,9 @@
             $vec[$i]=rand(0,9);
         }
 
-        for ($j in count($vec){}
+        for ($j=0, $j<=; $j++){
+            
+        }
     
     ?>
 
