@@ -16,8 +16,14 @@
             $vec[$i]=rand(0,9);
         }
 
-        for ($j=0, $j<=; $j++){
+        $num = [];
+        for ($k=0; $k<3; k++){
+            for ($j=0, $j<=count($vec); $j++){
             
+                if ($num[$k] ){
+                
+                }
+            }
         }
     
     ?>
