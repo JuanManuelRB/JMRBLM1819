@@ -13,10 +13,12 @@
     $i=1;
     $j=1;
     while ($i < 10){
+        echo "<div style="">"
         while ($j < 10){
             $res=($i * $j)
             echo "<p>" . $j . " x " . $i . " = " . $res . "</p>"
             $j++;
+        echo "</div>"
         }
         $i++;
     }
