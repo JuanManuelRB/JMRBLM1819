@@ -10,19 +10,11 @@
     
     <?php
     
-    $i=1;
-    $j=1;
-    while ($i < 10){
-        while ($j < 10){
-            $res=($i * $j)
-            echo "<p>" . $j . " x " . $i . " = " . $res . "</p>"
-            $j++;
-        }
-        $i++;
-    }
-
+    $dia=date("d");
     
-
+    for ($i = 1; $i <= $dia; $i++) {
+        echo $i;
+    }
     ?>
 
 </body>

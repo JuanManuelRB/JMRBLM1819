@@ -10,20 +10,16 @@
     
     <?php
     
-    $i=1;
-    $j=1;
-    while ($i < 10){
-        while ($j < 10){
-            $res=($i * $j)
-            echo "<p>" . $j . " x " . $i . " = " . $res . "</p>"
-            $j++;
+        $vec = [];
+        for ($i=0; $i<10; $i++){
+
+            $vec[$i]=rand(0,9);
         }
-        $i++;
-    }
 
+        for ($j in count($vec){}
     
-
     ?>
+
 
 </body>
 </html>
