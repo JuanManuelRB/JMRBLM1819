@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="resultado.php" enctype="multipart/form-data" method="POST">
+        <p><label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre"></p>
+        <p><label for="passwd">Pass:</label><input type="password" name="clave" id="passwd"></p>
+        <p><label for="desc">Descripción: </label><textarea name="desc" id="desc" cols="30" rows="5"></textarea>Esta es la descripción</p>
+        <p><label for="check">Cajita</label><input type="checkbox" name="opcion" id="check"></p>
+        <p>
+            <input type="radio" name="datos" value="d1" id="dat1"><label for="dat1">Dato1</label>
+            <input type="radio" name="datos" value="d2" id="dat2"><label for="dat2">Dato2</label>
+        </p>
+        <p><label for="sel">Selecciona uno o varios</label>
+            <select name="seleccion[]" multiple="multiple" id="sel">
+                <option value="Uno_opt">Uno</option>
+                <option value="Dos_opt">Dos</option>
+            </select>
+        </p>
+        <p><label for="fich">Fichero:</label><input type="file" name="file" id="fich"></p>
+
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+
+
+</body>
+</html>
