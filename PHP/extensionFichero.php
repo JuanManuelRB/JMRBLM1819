@@ -8,7 +8,7 @@ $archLenght = strlen($arch);
 $p=".";
     for ($i = 0; $i < $archLenght; $i++) {
         if(strcmp($arch[$i], $p) == 0){
-            return strtoupper(substr($arch, ($i + 1) ));
+            return strtoupper(substr($arch, ($i + 1)));
         }
 
     }
