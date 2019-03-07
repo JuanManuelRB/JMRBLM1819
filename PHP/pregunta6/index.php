@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body>
 
@@ -13,14 +13,14 @@
         echo '<p>Usuario o contraseña incorrecto</p>';
     }else if(isset($_COOKIE['error']) && $_COOKIE['error'] == 0){
         echo '
-        <form action="fecha.php" method="get">
+        <form action="fecha.php" method="GET">
         <label for="date">Introduce tu fecha de cumpleaños: </label><input type="date" name="date" id="date">
-        <input type="submit">
+        <input type="submit" value="Entrar">
         </form>
         ';
     }else{
         echo '
-            <form action="main.php" method="get">
+            <form action="main.php" method="POST">
             <label for="usr">Usuario: </label><input type="text" name="usr" id="usr"
         ';
 

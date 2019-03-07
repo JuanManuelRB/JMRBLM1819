@@ -16,7 +16,7 @@ $fechaf = $fecha_actual - $fecha;
 echo "Tu edad es " . floor(($fechaf/60/60/24/365)) . " años";
 ?>
 
-<a href="index.php">Volver</a>
+<a href="indexo.php">Volver</a>
 </body>
 </html>
 
