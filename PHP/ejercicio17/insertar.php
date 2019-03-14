@@ -9,25 +9,20 @@
 </head>
 <body>
     <div class="container">
-    <form action="insertar.php" method="post">
-    <div class="form-group">
-        <label for="nombre">Nombre Alumno</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Enter name">
-    </div>
-    <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter name">
-    </div>
-    <div class="form-group">
-        <label for="curso">Curso</label>
-        <select name="curso" id="curso" class="form-control">
-            <option value="1">PHP</option>
-            <option value="2">ASP</option>
-            <option value="3">JSP</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <?php
+        
+            $nombre = trim(htmlspecialchars( strip_tags($_REQUEST["nombre"]), ENT_QUOTES, "UTF-8"));
+            $email = trim(htmlspecialchars( strip_tags($_REQUEST["email"]), ENT_QUOTES, "UTF-8"));
+            $curso = trim(htmlspecialchars( strip_tags($_REQUEST["curso"]), ENT_QUOTES, "UTF-8"));
+
+            $conec = mysqli_connect("localhost", "root", "", "cursophp") or die("Problemas de conexión");
+            mysqli_query($conec, "INSERT INTO alumnos(nombre, mail, codigocurso) 
+                                    VALUES ("$nombre","$email",$curso)") 
+                                    or die("Problema al insertar ".mysqli_error($conec));
+        
+
+            echo "<h2></h2>"
+        ?>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

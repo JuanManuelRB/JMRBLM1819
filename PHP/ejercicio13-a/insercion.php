@@ -21,12 +21,22 @@
     <div class="form-group">
         <label for="curso">Curso</label>
         <select name="curso" id="curso" class="form-control">
-            <option value="1">PHP</option>
-            <option value="2">ASP</option>
-            <option value="3">JSP</option>
+            
+            <?php
+                $conn = mysqli_connect("localhost", "root", "", "cursophp") or die("Problemas de conexión");
+                $registros = mysqli_query($conn, "SELECT idCurso, nombreCurso FROM cursos") or die("Problemas al obtener los datos. ".mysqli_error($conn));
+
+                while($reg = mysqli_fetch_array($registros)){
+                    
+                    echo '<option value="' . $reg['idCurso'] . '">' . $reg['nombreCurso'] . '</option>';
+                }
+
+            
+            
+            ?>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Insert</button>
     </form>
     </div>
 
