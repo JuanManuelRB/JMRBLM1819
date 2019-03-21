@@ -1,0 +1,26 @@
+﻿<usuarios>
+	<usuario>
+    <id>1</id>
+		<login>john</login>
+		<password>145dd</password>
+		<home_dir>/home/john</home_dir>
+    		<nombre>Juan</nombre>
+    		<email>juan@gmail.com</email>
+  	</usuario>
+  	<usuario>
+  	    <id>2</id>
+     		<login>pepe</login>
+     		<password>1mgr8</password>
+     		<home_dir>/home/pepe</home_dir>
+     		<nombre>Pepe</nombre>
+     		<email>pepe@hotmail.com</email>
+  	</usuario>
+	<usuario>
+        <id>3</id>
+     		<login>antonio</login>
+     		<password>123ss</password>
+     		<home_dir>/home/antonio</home_dir>
+     		<nombre>Antonio</nombre>
+     		<email>antonio@gmail.com</email>
+  	</usuario>
+</usuarios>

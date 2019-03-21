@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Libros>
+  <libro>
+    <Cod_Libro>1</Cod_Libro>
+    <Titulo>Don Quijote de la Mancha</Titulo>
+    <Editorial>Juan de la Cuesta</Editorial>
+    <Edicion>3</Edicion>
+    <ISBN>98542365588995</ISBN>
+    <NumPaginas>176</NumPaginas>
+    <Autores>
+      <Cod_Autor>1</Cod_Autor>
+      <Nombre>Miguel</Nombre>
+      <Apellidos>de Cervantes Saavedra</Apellidos>
+      <FechaNacimiento>29/09/1547</FechaNacimiento>
+    </Autores>
+  </libro>
+  <libro>
+    <Cod_Libro>2</Cod_Libro>
+    <Titulo>La Celestina</Titulo>
+    <Editorial>Maxtor</Editorial>
+    <Edicion>1</Edicion>
+    <ISBN>321546848</ISBN>
+    <NumPaginas>320</NumPaginas>
+    <Autores>
+      <Cod_Autor>2</Cod_Autor>
+      <Nombre>Fernando</Nombre>
+      <Apellidos>de Rojas</Apellidos>
+      <FechaNacimiento>01/01/1470</FechaNacimiento>
+    </Autores>
+  </libro>
+</Libros>
