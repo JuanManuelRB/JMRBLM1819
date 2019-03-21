@@ -11,38 +11,15 @@
 
 <div class="container">
 
+<form action="datos.php" method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingresa un correo">
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</form>
+
 </div>
-
-<?php
-
-trim(htmlspecialchars(strip_tags($_REQUEST[""]), ENT_QUOTES, "UTF-8"));
-
-$a = mysqli_connect("localhost", "root", "", "cursophp") or die("");
-mysqli_query($a, "SELECT") or die(" ".mysqli_error($conec));
-
-echo '<table class="table table-dark">';
-while($reg = mysqli_fetch_array($registro)) {}
-echo '</table>';
-
-mysqli_close($a);
-
-
-setcookie("email", $b, time()+60*60);
-$_COOKIE['b']
-
-$c1 = explode(".", $c2);
-strtoupper($nombreExt[1]);
-
-session_start();
-
-$_SESSION['a'] = $a;
-
-session_destroy();
-
-header('Location: a.php');
-
-?>
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
