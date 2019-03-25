@@ -1,0 +1,50 @@
+﻿<pedidos>
+	<pedido cod="1">
+		<descripcion>Primer pedido</descripcion>
+		<fecha>10/01/2019</fecha>
+		<cantidad>3</cantidad>
+		<tipo>A</tipo>
+		<pagado>S</pagado>
+		<usuario>1</usuario>
+	</pedido>
+	<pedido cod="2">
+		<descripcion>Segundo pedido</descripcion>
+		<fecha>10/01/2019</fecha>
+		<cantidad>12</cantidad>
+		<tipo>B</tipo>
+		<pagado>S</pagado>
+		<usuario>2</usuario>
+	</pedido>
+	<pedido cod="3">
+		<descripcion>Tercer pedido</descripcion>
+		<fecha>12/01/2019</fecha>
+		<cantidad>8</cantidad>
+		<tipo>A</tipo>
+		<pagado>N</pagado>
+		<usuario>1</usuario>
+	</pedido>
+	<pedido cod="4">
+		<descripcion>Cuarto pedido</descripcion>
+		<fecha>13/01/2019</fecha>
+		<cantidad>44</cantidad>
+		<tipo>B</tipo>
+		<pagado>N</pagado>
+		<usuario>3</usuario>
+	</pedido>
+	<pedido cod="5">
+		<descripcion>Quinto pedido</descripcion>
+		<fecha>14/01/2019</fecha>
+		<cantidad>11</cantidad>
+		<tipo>A</tipo>
+		<pagado>S</pagado>
+		<usuario>3</usuario>
+	</pedido>
+	<pedido cod="6">
+		<descripcion>Sexto pedido</descripcion>
+		<fecha>15/01/2019</fecha>
+		<cantidad>56</cantidad>
+		<tipo>B</tipo>
+		<pagado>N</pagado>
+		<usuario>2</usuario>
+	</pedido>
+</pedidos>
