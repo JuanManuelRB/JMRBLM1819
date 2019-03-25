@@ -8,6 +8,7 @@
 </head>
 <body>
     
+<!--3. Dado un vector de números positivos desordenado, recórralo y muestre los 3 números mayores.-->
     <?php
     
         $vec = [];
@@ -16,16 +17,25 @@
             $vec[$i]=rand(0,9);
         }
 
-        $num = [];
-        for ($k=0; $k<3; k++){
-            for ($j=0, $j<=count($vec); $j++){
-            
-                if ($num[$k] ){
+        $num[0] = $vec[0];
+        $pos=0;
+        for ($k=0; $k<3; $k++){
+            for ($j=0; $j<=count($vec); $j++){
                 
+                if($j==$pos){
+
+                    $j++;
                 }
+
+                if($num[$k]<$vec[$j]){
+                    
+                    $num[$k]=$vec[$j];
+                    $pos=$j;
+                }   
             }
+            echo $num[$k]
         }
-    
+        
     ?>
 
 
