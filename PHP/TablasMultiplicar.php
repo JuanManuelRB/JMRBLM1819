@@ -7,24 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <?php
-    
+<div style="display: inline"></div>    
+
+<!--1. Desarrolle un ejercicio que muestre las tablas de multiplicar -->
+    <?php    
     $i=1;
     $j=1;
     while ($i < 10){
-        echo "<div style="">"
+        echo '<div style="display: inline; float: left;">'
         while ($j < 10){
             $res=($i * $j)
-            echo "<p>" . $j . " x " . $i . " = " . $res . "</p>"
+            echo "<pre>" . $j . " x " . $i . " = " . $res . "</pre><br/>"
             $j++;
         echo "</div>"
         }
         $i++;
     }
-
-    
-
     ?>
 
 </body>
