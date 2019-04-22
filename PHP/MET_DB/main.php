@@ -4,7 +4,7 @@
     $unidad = $_REQUEST['Unidad_Medida'];
     $valor = $_REQUEST['Valor'];
 
-    
+    https://programacion.net/codigo/consultar_bd_mysql_utilizando_poo_135
 
 
         if (isset($fechaInicio) && !empty($fechaInicio)){
