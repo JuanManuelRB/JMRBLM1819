@@ -7,7 +7,11 @@ $fecha = trim(htmlspecialchars(strip_tags($_REQUEST["fecha"]), ENT_QUOTES, "UTF-
 $texto = trim(htmlspecialchars(strip_tags($_REQUEST["texto"]), ENT_QUOTES, "UTF-8"));
 
 $conn = mysqli_connect("db4free.net:3306", "adminies", "Adminies", "bddrss") or die("Problemas en la conexion");
-$registro = mysqli_query($conn, "SELECT * FROM alumnos WHERE mail like '$email'") or die("Problemas en la consulta: ".mysqli_error($connect));
+$registro = mysqli_query($conn, "INSERT INTO noticias(autor,titulo,categoria,fecha,noticia)
+                                    VALUES ('$autor', '$titulo', '$categoria', $fecha, '$texto')"
+                        ) 
+or die("Problemas en la consulta: ".mysqli_error($connect));
 
+mysqli_close($conn);
 
 ?>

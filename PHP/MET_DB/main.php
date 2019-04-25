@@ -37,7 +37,9 @@
         trigger_error($db->connect_error);
         }
     
-    
+    $query = "SELECT ?
+    FROM table ? ;
+
 
 
         
