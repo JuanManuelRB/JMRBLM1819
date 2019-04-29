@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+- Crea un documento XML bien formado de un instituto que incluya estudiantes, profesores y trabajadores.
+- Crea un documento XML bien formado sobre una biblioteca. Debe contener atributos que permitan identificar el libro y que registren si están prestados o no.
+- Crea un documento XML bien formado que contenga elementos iguales bat (bate y murciélago) pero que pertenezcan a dos espacios de nombres diferentes.
+-->
+<Instituto>
+    <codigo>1234</codigo>
+    <telefono></telefono>
+    <estudiante>
+        <nombre>Juan Manuel</nombre>
+        <curso>2B</curso>
+    </estudiante>
+    <profesor>
+        <nombre>Pepe</nombre>
+        <materia>Matematicas2</materia>
+    </profesor>
+    <trabajador>
+        <nombre>Jose</nombre>
+        <trabajo>Secretario</trabajo>
+    </trabajador>
+</Instituto>
+
+<Biblioteca>
+    <libro publicacion="2003" edicion="2">
+      <titulo>El Señor de los Anillos</titulo>
+      <titulo_original>The Lord of the Rings</titulo_original>
+      <autor>
+        <nombre>John Ronald</nombre>
+        <apellidos>Reuel Tolkien</apellidos>
+      </autor>
+      <editorial>George Allen &amp; Unwin</editorial>
+      <paginas>416</paginas>
+    </libro>
+</Biblioteca>
+
