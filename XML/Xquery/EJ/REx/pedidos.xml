@@ -1,5 +1,5 @@
 <pedidos>
-<pedido cod="1">
+	<pedido cod="1">
 		<descripcion>Primer pedido</descripcion>
 		<fecha>10/01/2019</fecha>
 		<cantidad>3</cantidad>

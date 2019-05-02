@@ -1,0 +1,108 @@
+1
+(:Obtener los pedidos de los usuarios pagados, ordenados por cantidad. Mostrar el login, nombre, cantidad, pagado y fecha.:)
+for $p in doc("pedidos.xml")//pedidos/pedido,
+$u in doc("usuarios.xml")//usuarios/usuario
+where $p/pagado = "S" and $u/id = $p/usuario
+order by $p/cantidad
+return
+<Pedido>
+<login>{$u/login/text()}</login>
+<nombre>{$u/nombre/text()}</nombre>
+<cantidad>{$p/cantidad/text()}</cantidad>
+<pagado>{$p/pagado/text()}</pagado>
+<fecha></fecha>
+</Pedido>
+
+2
+(:Mostrar los pedidos cuya cantidad sea mayor que 10. Mostrar sólo la descripción, fecha, tipo y cantidad.:)
+for $p in doc("pedidos.xml")/pedidos/pedido
+where $p/cantidad > 10
+return
+<pedido>
+<descripcion>{$p/descripcion/text()}</descripcion>
+<fecha>{$p/fecha/text()}</fecha>
+<tipo>{$p/tipo/text()}</tipo>
+<cantidad>{$p/cantidad/text()}</cantidad>
+</pedido>
+
+3
+(:Mostrar todos los pedidos del usuario con id 3 que no estén pagados y sean del tipo B. Mostrar el login del usuario, el nombre, email, la descripción y la fecha del pedido.:)
+for $p in doc("pedidos.xml")/pedidos/pedido,
+$u in doc("usuarios.xml")/usuarios/usuario
+where $p/pagado = "S" and $p/tipo = "B" and $p/usuario = 3 and $u/id = 3
+return
+<pedido>
+<login>{$u/login/text()}</login>
+<nombre>{$u/nombre/text()}</nombre>
+<email>{$u/email/text()}</email>
+<descripcion>{$p/descripcion/text()}</descripcion>
+<fecha>{$p/fecha/text()}</fecha>
+</pedido>
+
+4
+(:Mostrar la cantidad total de los pedidos de tipo A. Etiquetarla como “cantidadTotalA”.:)
+let $p := //pedidos/pedido
+where $p/tipo = "A"
+return
+<cantidadTotalA>{sum($p/cantidad)}</cantidadTotalA>
+
+5
+(:Mostrar la cantidad máxima y mínima de los pedidos.:)
+let $c := //pedidos/pedido/cantidad
+return
+<MaxMin>
+<max>{max($c)}</max>
+<min>{min($c)}</min>
+</MaxMin>
+
+6
+(:Mostrar todos los pedidos del 10/01/2019 que sean del tipo A. Muestre la descripción, fecha y cantidad.:)
+for $p in //pedidos/pedido
+where $p/fecha = "10/01/2019"
+return
+<pedido>
+<descripcion>{$p/descripcion/text()}</descripcion>
+<fecha>{$p/fecha/text()}</fecha>
+<cantidad>{$p/cantidad/text()}</cantidad>
+</pedido>
+
+7
+(:Mostrar todos los usuarios que tienen cuenta de correo en gmail.:)
+for $e in //usuarios/usuario
+let $u := //usuarios/usuario
+where contains($e/email, ["gmail"])
+return
+<usuario>
+<nombre>{$u/nombre/text()}</nombre>
+<email>{$e/email/text()}</email>
+</usuario>
+
+8
+(:Genera una página html con una tabla con los pedidos no pagados.:)
+for $ped in //pedidos/pedido
+where contains($ped/pagado, ["S"])
+return
+<tr>
+<td>descripcion {$ped/descripcion/text()}</td>
+<td>fecha {$ped/fecha/text()}</td>
+<td>cantidad {$ped/cantidad/text()}</td>
+<td>tipo {$ped/tipo/text()}</td>
+<td>usuario {$ped/usuario/text()}</td>
+</tr>
+
+9
+(:Inserta un nuevo usuario con los datos que estimes oportunos.:)
+insert node<usuario>
+ <id>4</id>
+ <login>JMRB</login>
+ <password>12345a</password>
+ <home_dir>/home/Alejandro</home_dir>
+ <nombre>JuanManuel</nombre>
+ <email>"jumarobo982013@gmail.com"</email>
+</usuario>
+ into //usuarios
+
+10
+(:Actualiza el pedido con código 4 a pagado. :)
+replace value of node //pedidos/pedido[@cod=4]/pagado
+with <pagado>S</pagado>

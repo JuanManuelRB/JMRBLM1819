@@ -61,7 +61,17 @@
 
     $conn = mysqli_connect("localhost", "root", "", "weather_station") or die("Problema en la conexión");
     $reg = mysqli_query($conn, "SELECT limit ,5"
-                        ) or die("Error en la consulta: ".mysqli_error($conn));
+                        ) or die("Error en la consulta: ".mysqli_error($conn)");
+
+
+funct(){
+    
+    return $registro
+}
+
 ?>
+
+
+
 
         
