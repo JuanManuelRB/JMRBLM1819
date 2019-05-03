@@ -8,15 +8,19 @@
     
 
     //  https://programacion.net/codigo/consultar_bd_mysql_utilizando_poo_135
+    //  https://rafaelrojasblog.wordpress.com/2016/09/21/como-conectarse-a-mysql-desde-php5-php7-usando-poo/
+    //  https://es.stackoverflow.com/questions/4636/cómo-hacer-la-conexión-a-mysql-aplicando-poo
+    //  http://soyprogramador.liz.mx/conexion-a-php-con-mysql-orientada-a-objetos/
+    //  https://www.taringa.net/+hazlo_tu_mismo/aplicando-poo-en-php-para-conectar-a-base-de-datos-mysql_vself
 
-
+/*
         if (isset($fechaInicio) && !empty($fechaInicio)){
             $FI=strtotime($fechaInicio);
         }else{
             $FI=/*Select fecha 
                     from table 
                     having min(fecha) 
-                    group by fecha  */;
+                    group by fecha  ;
         }
 
         if (isset($fechaFin) && !empty($fechaFin)){
@@ -25,7 +29,7 @@
             $FF=/*Select fecha 
                     from table 
                     having min(fecha) 
-                    group by fecha  */;
+                    group by fecha  ;
         }
 
         between ($fechaI, $fechaF){
@@ -43,14 +47,11 @@
 
 funcion($inicio){
 
-    $registros = mysqli_query($conn, 'SELECT m.Fecha_Hora,s.modelo,m.Valor,s.id,m.Sensores_id,m.Variables_Id 
-                                            FROM medidas m inner join sensores s on m.Sensores_id = s.id 
-                                            ORDER BY Fecha_Hora 
-                                            LIMIT $inicio,6') 
+    $registros = mysqli_query($conn, ) 
     or die("Problemas en el select ".mysqli_error($conn));  
 }               
                         
-                        
+*/                       
                        
 ?>
 
@@ -65,7 +66,11 @@ class MeteoBd{
     var $enlace;//Almacena el enlace con la Base de Datos una vez establecido
     var $resultado;//Almacena el resultado obtenido por la consulta a la BD
     var $consulta;//Almacena la consulta realizada con el metodo consultaBD();
-
+    
+    $consulta = 'SELECT m.Fecha_Hora,s.modelo,m.Valor,s.id,m.Sensores_id,m.Variables_Id 
+                    FROM medidas m inner join sensores s on m.Sensores_id = s.id 
+                    ORDER BY Fecha_Hora' 
+                    
     //Constructor de la Clase
     //Inicializa algunos atributos Básicos
 
@@ -81,9 +86,9 @@ class MeteoBd{
 
 
     function conectarBD(){
-        if($this->enlace=mysql_connect($this->servidor,$this->nombreDeUsuario,$this->contrasena)){
+        if($this->enlace=mysql_connect($this->servidor, $this->nombreDeUsuario, $this->contrasena)){
 
-            if(mysql_select_db($this->nombreBD,$enlace)){
+            if(mysql_select_db($this->nombreBD, $enlace)){
 
                 $this->enlace=$enlace;
             }else{
@@ -100,9 +105,9 @@ class MeteoBd{
 
     //consultarBD(); permite realizar consultas en la BD enlazada
 
-    function consultarBD($sentenciaSQL){
+    function consultarBD($consulta){
 
-        $this->consulta=mysql_query($sentenciaSQL,$this->enlace);
+        $this->consulta=mysql_query($consulta,$this->enlace);
     }
 
     //obtenerResultado(); Devuelve los resultados de la Base de Datos
@@ -131,8 +136,7 @@ class MeteoBd{
 
     include("AdaCnxBd.php");
 
-    $objBd=new AdaCnxBd("localhost","MyBD","MyLogin","MyPass");
-
+    $objBd=new conectarBd("localhost","MyBD","MyLogin","MyPass");
     $objBd->conectarBD();
 
     $objBd->consultarBD("select * from MyTable");
@@ -149,7 +153,7 @@ class MeteoBd{
 
     ?>
     */
-    ?>
+?>
     
 
 
