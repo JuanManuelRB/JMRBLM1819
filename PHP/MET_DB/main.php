@@ -7,19 +7,25 @@
 
     
 
-    https://programacion.net/codigo/consultar_bd_mysql_utilizando_poo_135
-/*
+    //  https://programacion.net/codigo/consultar_bd_mysql_utilizando_poo_135
+
 
         if (isset($fechaInicio) && !empty($fechaInicio)){
-            $FF=strtotime($fechaInicio);
+            $FI=strtotime($fechaInicio);
         }else{
-            $FF=NULL;
+            $FI=/*Select fecha 
+                    from table 
+                    having min(fecha) 
+                    group by fecha  */;
         }
 
         if (isset($fechaFin) && !empty($fechaFin)){
-            $FI=strtotime($fechaFin);
+            $FF=strtotime($fechaFin);
         }else{
-            $FI=NULL;
+            $FF=/*Select fecha 
+                    from table 
+                    having min(fecha) 
+                    group by fecha  */;
         }
 
         between ($fechaI, $fechaF){
@@ -31,36 +37,6 @@
                 
             }
           }
-    $conn = new mysqli("localhost","usuario","passwd","db");
-    if ($conn->connect_errno > 0) {
-        trigger_error($db->connect_error);
-        }
-    
-    $query = "SELECT ?
-    FROM table ? ;
-
-
-
-        
-        date("Y-m-d H:i", $FI);
-        
-        date("Y-m-d H:i", $FI);
-
-
-       
-
-    request ($fechaInicio, ) {
-        this.$fechaInicio = strtotime();
-        private $fechaFin = $_REQUEST['FF'];
-        private $unidad = $_REQUEST['Unidad_Medida'];
-        private $valor = $_REQUEST['Valor'];
-        }
-        
-    
-
-    $conn = mysqli_connect("localhost", "root", "", "weather_station") or die("Problema en la conexión");
-    $reg = mysqli_query($conn, "SELECT limit ,5"
-                        ) or die("Error en la consulta: ".mysqli_error($conn));
 
 
 
@@ -75,7 +51,7 @@ funcion($inicio){
 }               
                         
                         
-*/                        
+                       
 ?>
 
 <?php
@@ -86,24 +62,19 @@ class MeteoBd{
     var $nombreDeUsuario; //Nombre del usuario autorizado para entrar a la Base de Datos
     var $contrasena; //Contraseña del Usuario
 
-
     var $enlace;//Almacena el enlace con la Base de Datos una vez establecido
     var $resultado;//Almacena el resultado obtenido por la consulta a la BD
     var $consulta;//Almacena la consulta realizada con el metodo consultaBD();
 
-
-
     //Constructor de la Clase
     //Inicializa algunos atributos Básicos
 
-    function AdaCnxBd($servidor,$nombreBD,$nombreDeUsuario,$contrasena){
+    function datosBd($servidor,$nombreBD,$nombreDeUsuario,$contrasena){
         $this->servidor=$servidor;
         $this->nombreBD=$nombreBD;
         $this->nombreDeUsuario=$nombreDeUsuario;
         $this->contrasena=$contrasena;
     }
-
-
 
     //Metodos y Procedimientos
     //conectarBD(); Te permite conectar y enlazar la BD, el enlace a la BD es almacenado modificando el atributo $enlace
@@ -127,16 +98,12 @@ class MeteoBd{
         }
     }
 
-
-
     //consultarBD(); permite realizar consultas en la BD enlazada
 
     function consultarBD($sentenciaSQL){
 
         $this->consulta=mysql_query($sentenciaSQL,$this->enlace);
     }
-
-
 
     //obtenerResultado(); Devuelve los resultados de la Base de Datos
 
@@ -146,8 +113,6 @@ class MeteoBd{
         return $this->resultado;
     }
 
-
-
     //liberarConsulta(); libera el contenido del atributo que almacena las consultas
 
     function liberarConsulta(){
@@ -155,16 +120,7 @@ class MeteoBd{
         mysql_free_result($this->consulta);
     }
 
-
-
-    function insertarRegistro($sentenciaSQL){
-
-        mysql_query($sentenciaSQL,$this->enlace);
-    }
-
-
-
-    }//Fin de la Clase MeteoBD
+}//Fin de la Clase MeteoBD
 
 
 
