@@ -45,24 +45,6 @@ class SGBD {
         return $consul;
     }
     
-    
-    public static function SelectTime($MM) {
-        if ($MM == "min"){
-
-            if (!$consul = SGBD::sql("SELECT min(m.Fecha_Hora) FROM medidas m")) {
-                echo " Ha ocurrido un error al obtener los datos.";
-            }
-                return $consul;
-
-        }else if ($MM == "max"){
-
-            if (!$consul = SGBD::sql("SELECT max(m.Fecha_Hora) FROM medidas m")) {
-                echo " Ha ocurrido un error al obtener los datos.";
-            }
-                return $consul;
-        }
-    }
-
 
     /*Funcion para insertar datos*/
     public static function Insert($tabla, $campos, $valores) {
