@@ -16,6 +16,7 @@ $fechaInicio = trim(htmlspecialchars( strip_tags($_REQUEST["fechainicio"]), ENT_
 $fechaFin = trim(htmlspecialchars( strip_tags($_REQUEST["fechafin"]), ENT_QUOTES, "UTF-8"));
 $medida = trim(htmlspecialchars( strip_tags($_REQUEST["medida"]), ENT_QUOTES, "UTF-8"));
 $valor = trim(htmlspecialchars( strip_tags($_REQUEST["valor"]), ENT_QUOTES, "UTF-8"));
+list($valorInicio,$valorFin) = exploit(';',$valor);
 */
 $fechaInicio = '23/04/1998';
 $fechaFin = '06/04/2019';
@@ -41,14 +42,14 @@ $campos = 'm.Fecha_Hora,s.modelo,m.Valor,s.id,m.Sensores_id,m.Variables_Id';
 $tablas = 'medidas m inner join sensores s on m.Sensores_id = s.id';
 $condicion = 'Fecha_Hora BETWEEN ' . $FI . ' and ' . $FF;
 $order = 'Fecha_Hora ';
-$limite = '$inicio,6';
+$limite = $inicio . ',6';
 $inicio = 1;
-$consulta = 
 //Hay dos formas de consultar pero voy a dejar esta
 //SGBD::Select($campos,$tablas,$condicion,$order,$limite);
 $query = SGBD::sql("SELECT $campos FROM $tablas 
 ORDER BY $order
-WHERE $condicion");
+WHERE $condicion
+$limite");
 
 while($r = mysqli_fetch_array($query)){
     print '<p>' . $r['Variables_Id'] . '</p>';
