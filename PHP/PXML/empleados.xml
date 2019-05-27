@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<empleados>
+    <registro numero='101'>
+        <nombre>Juan</nombre>
+        <puesto>CEO</puesto>
+    </registro>
+    <registro numero='102'>
+        <nombre>Pepe</nombre>
+        <puesto>Administrador</puesto>
+    </registro>
+</empleados>
